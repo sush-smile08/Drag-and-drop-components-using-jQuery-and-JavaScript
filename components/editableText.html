@@ -1,0 +1,132 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Editable text</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <style>
+        body{ 
+        font-family: "Dosis"; 
+        font-size: 1.3em;
+        line-height: 1.6em;
+        }
+
+        .headline{
+        font-size: 2em;
+        text-align: center;
+        }
+
+        #wrapper {
+        width: 600px;
+        background: #FFF;
+        padding: 1em;
+        margin: 1em auto;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        border-radius: 3px;
+        }
+
+        button {
+        border: none;
+        padding: 0.8em;
+        background: #F96;
+        border-radius: 3px;
+        color: white;
+        font-weight: bold;
+        margin: 0 0 1em;
+        }
+
+        button:hover, button:focus {
+        cursor: pointer;
+        outline: none;
+        }
+
+        #editor {
+        padding: 1em;
+        background: #E6E6E6;
+        border-radius: 3px;
+        }
+
+        #editor:focus {
+        background: #FFF;
+        border-color: #69c773;
+        }
+
+        [contenteditable="true"] {
+        font-family: "Rajdhani";
+        color: #C00;
+        }
+
+    </style>
+</head>
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Dosis|Rajdhani' rel='stylesheet' type='text/css'>
+
+    <div id="wrapper">
+
+        <link href='https://fonts.googleapis.com/css?family=Dosis|Rajdhani' rel='stylesheet' type='text/css'>
+
+        <div id="wrapper">
+        
+          <section>
+            <h1 class="headline">contentEditable Demonstration</h1>
+        
+            <button id="editBtn" type="button">Edit Document</button>
+            <div id="editDocument">
+              <h1 id="title">A Nice Heading.</h1>
+              <p>Last Edited by <span id="author">Monty Shokeen</span>
+              </p>
+              <p id="content">You can change the heading, author name and this content itself. Click on Edit Document to start editing. All the editable content is styled differently. The final content is saved in localStorage and is retrieved later when you reload the webpage.</p>
+            </div>
+          </section>
+        </div>
+    </div>
+    
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+    <script>
+            var editBtn = document.getElementById('editBtn');
+var editables = document.querySelectorAll('#title, #author, #content');
+
+if (typeof(Storage) !== "undefined") {
+  if (localStorage.getItem('title') !== null) {
+    editables[0].innerHTML = localStorage.getItem('title');
+  }
+  if (localStorage.getItem('author') !== null) {
+    editables[1].innerHTML = localStorage.getItem('author');
+  }
+  if (localStorage.getItem('content') !== null) {
+    editables[2].innerHTML = localStorage.getItem('content');
+  }
+}
+
+editBtn.addEventListener('click', function(e) {
+  if (!editables[0].isContentEditable) {
+    editables[0].contentEditable = 'true';
+    editables[1].contentEditable = 'true';
+    editables[2].contentEditable = 'true';
+    editBtn.innerHTML = 'Save Changes';
+    editBtn.style.backgroundColor = '#6F9';
+  } else {
+    // Disable Editing
+    editables[0].contentEditable = 'false';
+    editables[1].contentEditable = 'false';
+    editables[2].contentEditable = 'false';
+    // Change Button Text and Color
+    editBtn.innerHTML = 'Enable Editing';
+    editBtn.style.backgroundColor = '#F96';
+    // Save the data in localStorage 
+    for (var i = 0; i < editables.length; i++) {
+      localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
+    }
+  }
+});
+
+setInterval(function() {
+  for (var i = 0; i < editables; i++) {
+    localStorage.setItem(editables[i].getAttribute('id'), editables[i].innerHTML);
+  }
+}, 5000);
+    </script>
+</body>
+</html> -->

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drap and drop</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/drap-drop-style.css">
+    <link rel="stylesheet" href="../assets/css/top-header.css">
+    <link rel="stylesheet" href="../assets/css/logo-header-style.css">
+    <link rel="stylesheet" href="../assets/css/flexslider.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
+</head>
+<body>
+  <button id="undo">Undo</button>
+  <button id="redo">Redo</button>
+  <h1 id="trash" style="background:#f00;">drop here to delete</h1>
+  <button id="editBtn" type="button">Edit Document</button>
+    <div class="uiDraggable ">
+
+        <div class="toolbox">
+          <ul>
+            <li draggable="true" data-template="container">
+              <label>Container</label>
+            </li>
+            <li draggable="true" data-template="title">
+              <label>Title</label>
+            </li>
+            <li draggable="true" data-template="image">
+              <label>Image</label>
+            </li>
+            <li draggable="true" data-template="column-2">
+              <label>2-Column</label>
+            </li>
+            <li draggable="true" data-template="table">
+              Table
+            </li>
+            <li draggable="true" data-template="form">
+              Form
+            </li>
+            <li draggable="true" data-template="top-header">
+              Top Header
+            </li>
+            <li draggable="true" data-template="logo-header">
+              Logo Header
+            </li>            
+            <li draggable="true" data-template="content">
+              Content Block
+            </li>
+            <li draggable="true" data-template="banner-slider">
+              Banner Slider
+            </li>
+          </ul>
+        </div>      
+        <div class="canvas connected-sortable droppable-area1 content" data-handle id="" onclick='$(this).focus();'> </div>      
+      </div>
+      
+      <library style="display: none">
+        <div id="js-tooltip">
+          <div class="js-tooltip">
+            <a href="javascript:">Edit</a>
+            <a href="javascript:">Remove</a>
+          </div>
+        </div>
+
+        <ul id="js-templates"  class="contaoner drag-sort-enable"> 
+          <li data-label="container">
+            <section  data-handle  class="container content-wrapper">
+              <div>Container</div>
+            </section>
+          </li>
+          <li data-label="title" class="item">
+            <section data-handle class="content-wrapper">
+              <h2>TItle</h2>
+            </section>
+          </li>
+          <li data-label="image" class="item content-wrapper">
+            <section data-handle>
+              <div>
+                <img src="//placehold.it/200x100" alt="">
+              </div>
+            </section>
+          </li>
+          <li data-label="column-2"  >
+            <section  data-handle class="content-wrapper">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-6" data-handle>col 1</div>
+                  <div class="col-6" data-handle>col 2</div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li data-label="table">
+            <section data-handle class="content-wrapper">
+              <!-- wrap-->
+              <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <thead>
+                    <tr>
+                      <th class="white"></th>
+                      <th>rank</th>
+                      <th>top speed</th>
+                      <th>acceleration</th>
+                      <th>handling</th>
+                      <th>nitro</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td class="align-right"><img src="https://media01.gameloft.com/web_mkt/minisites/asphalt-9/assets/os/img/hi-res/news/star-1.png"><span>1</span></td>
+                      <td>2119</td>
+                      <td>310</td>
+                      <td>77.45</td>
+                      <td>49.6</td>
+                      <td>40.8</td>
+                    </tr>
+                    <tr>
+                      <td class="align-right"><img src="https://media01.gameloft.com/web_mkt/minisites/asphalt-9/assets/os/img/hi-res/news/star-2.png"><span>2</span></td>
+                      <td>2504</td>
+                      <td>315</td>
+                      <td>79.81 </td>
+                      <td>51.55</td>
+                      <td>45.92</td>
+                    </tr>
+                    <tr>
+                      <td class="align-right"><img src="https://media01.gameloft.com/web_mkt/minisites/asphalt-9/assets/os/img/hi-res/news/star-3.png"><span>3</span></td>
+                      <td>2886</td>
+                      <td>319.6 </td>
+                      <td>82.34</td>
+                      <td>53.64 </td>
+                      <td>50.57</td>
+                    </tr>
+                    <tr>
+                      <td class="align-right"><img src="https://media01.gameloft.com/web_mkt/minisites/asphalt-9/assets/os/img/hi-res/news/star-4.png"><span>4</span></td>
+                      <td>3199</td>
+                      <td>323.5</td>
+                      <td>84.32</td>
+                      <td>55.26</td>
+                      <td>54.66</td>
+                    </tr>
+      
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </li>
+          <li data-label="top-header">
+            <section class="top-header content-wrapper" data-handle>
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="gov-india-wrapper">
+                      <ul>
+                        <li class="gov-hindi"><a href="https://india.gov.in/hi" target="_blank" title="भारत सरकार ( बाहरी वेबसाइट जो एक नई विंडो में खुलती है)">भारत सरकार</a></li>
+                        <li class="gov-eng"><a href="https://india.gov.in/" target="_blank" title="Government of india,External Link that opens in a new window">Government of india</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="accessibility-wrapper">
+                      <ul>
+                        <li class="skip"><a href="#skipCont" title="">Skip to main content</a></li>
+                        <li class="search">
+                          <a href="javascript:void(0);" id="toggleSearch" title="Site Search"><img class="top" src="../assets/images/ico-site-search.png" alt="Site Search"></a>
+                          <div class="search-drop both-search" style="display: none;">
+                              <div class="find">
+                              <form name="searchForm" action="">
+                                  <label for="search_key" class="notdisplay">Search</label>
+                                  <input type="text" name="search_key" id="search_key" onKeyUp="autoComplete()" autocomplete="off" required />
+                                  <input type="submit" value="Search" class="bttn-search"/>
+                              </form>
+                              <div id="auto_suggesion"></div>
+                              </div>
+                          </div>
+                        </li>
+                        <li class="accessibility-menu">
+                          <a href="javascript:void(0);" id="toggleAccessibility" title="Accessibility Dropdown" role="link">
+                            <img class="top" src="../assets/images/ico-accessibility.png" alt="Accessibility Dropdown" />
+                          </a>
+                          <ul style="visibility: hidden; display: none;">
+                            <li><a onClick="set_font_size(&#39;increase&#39;)" title="Increase font size" href="javascript:void(0);" role="link">A<sup>+</sup></a></li>
+                            <li> <a onClick="set_font_size()" title="Reset font size" href="javascript:void(0);" role="link">A<sup>&nbsp;</sup></a> </li>
+                            <li> <a onClick="set_font_size(&#39;decrease&#39;)" title="Decrease font size" href="javascript:void(0);" role="link">A<sup>-</sup></a> </li>
+                            <li> <a href="javascript:void(0);" class="high-contrast dark" title="High Contrast" role="link">A</a> </li>
+                            <li> <a href="javascript:void(0);" class="high-contrast light" title="Normal Contrast" style="display: none;" role="link">A</a> </li>
+                          </ul>
+                        </li>
+                        <li class="ico-social">
+                          <a href="javascript:void(0);" id="toggleSocial" title="Social Medias">
+                          <img class="top" src="../assets/images/ico-social.png" alt="Social Medias" /></a>
+                          <ul style="display: none;">
+                            <li>
+                              <a target="_blank" title="External Link that opens in a new window" href="http://www.facebook.com/">
+                                <img alt="Facebook Page" src="../assets/images/ico-facebook.png">
+                              </a>
+                            </li>
+                            <li>
+                              <a target="_blank" title="External Link that opens in a new window" href="http://www.twitter.com/">
+                                <img alt="Twitter Page" src="../assets/images/ico-twitter.png">
+                              </a>
+                            </li>
+                            <li>
+                              <a target="_blank" title="External Link that opens in a new window" href="http://www.youtube.com/">
+                                <img alt="youtube Page" src="../assets/images/ico-youtube.png">
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="ico-sitemap cf"><a href="" title="Sitemap">
+                          <img class="top" src="../assets/images/ico-sitemap.png" alt="Sitemap" /></a>
+                        </li>
+                        <li class="hindi cmf_lan d-hide">
+                          <label class="de-lag">
+                            <span>Language</span>
+                            <select title="Select Language">
+                                <option>English</option>
+                                <option>हिन्दी</option>
+                            </select>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </li>
+          <li data-label="logo-header">
+            <section class="logo-header content-wrapper" data-handle draggable="true">
+              <div class="container">
+                 <div class="logo-wrapper">
+                      <h2 class="logo">
+                          <a href="#" title="Home" rel="home" class="header__logo" id="logo">
+                          <img class="national_emblem" src="../assets/images/emblem-dark.png" alt="national emblem" >
+                          <p><span>मंत्रालय / विभाग नाम</span>                       
+                              <span> Ministry of  / Department Name</span>
+                          </p>
+                          </a>
+                      </h2>
+                      <div class="header-right clearfix">
+                          <div class="right-content clearfix">
+                              <div class="float-element">
+                                  <a class="sw-logo" target="_blank" href="https://swachhbharat.mygov.in/" title="Swachh Bharat, External link that open in a new windows">
+                                  <img src="../assets/images/swach-bharat.png" alt="Swachh Bharat">
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                 </div>
+              </div>
+            </section>
+          </li>
+          <li data-label="content">
+            <section class="content-wrapper" data-handle>
+              <div class="container" draggable="true">
+                  <h2>Heading</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+          </section>
+          </li>
+          <li data-label="banner-slider">
+            <section class="wrapper banner-wrapper">
+              <div id="flexSlider" class="flexslider">
+                 <ul class="slides">
+                    <li><img src="../assets/images/banner/slider-1.jpg" alt="Home slider1"></li>
+                    <li><img src="../assets/images/banner/slider-1.jpg" alt="Home slider2"></li>
+                    <li><img src="../assets/images/banner/slider-1.jpg" alt="Home slider3"></li>
+                 </ul>
+              </div>
+            </section> 
+          </li>
+        </ul>
+      </library>
+    
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/base.js"></script>
+    <script src="../assets/js/drag-drop.js"></script>
+    <script src="../assets/js/undo-reundo.js"></script>
+    <script src="../assets/js/jquery-flexslider.js"></script>
+    <script src="../assets//js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+</body>
+</html>

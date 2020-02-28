@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+        margin: 20px;
+        }
+
+        .dragster-region {
+        padding: 20px;
+        display: block;
+        background-color: #efefef;
+        border: 1px solid #ccc;
+        max-width: 400px;
+        }
+
+        .dragster-block {
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button id="undo">Undo</button>
+<button id="redo">Redo</button>
+<div class="site-content dragster-region">
+  
+  <div class="dragster-region">
+    <div class="dragster-block">0</div>
+    <div class="dragster-block">1</div>
+    <div class="dragster-block">2</div>
+  </div>
+
+  <div class="dragster-region">
+    <div class="dragster-block drugster-block-container">
+      <div class="dragster-block">
+        <div class="content">123</div>
+      </div>
+      <div class="dragster-block">456</div>
+    </div>
+    <div class="dragster-block">7</div>
+    <div class="dragster-block">8</div>
+  </div> 
+  
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.7.1/js/froala_editor.min.js"></script>
+<script src="https://mattjmattj.github.io/simple-undo/bower_components/simple-undo/lib/simple-undo.js"></script>
+<script src="../assets/js/undo-reundo.js"></script>
+</body>
+</html>
